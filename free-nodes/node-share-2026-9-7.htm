@@ -350,14 +350,14 @@ clash -d ~/.config/clash &amp;
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VMess 的 TLS 选项何时使用最合适？</h5></div>
+    <div class="panel-heading"><h5>Hysteria2 是否支持 UDP 加速？</h5></div>
     <div class="panel-body">
-        TLS 可提供加密和伪装，适合在高封锁或不稳定网络环境使用。结合域名伪装和证书，可让流量看起来像普通 HTTPS 请求，提升抗封锁能力和隐蔽性。<hr />    </div>
+        支持。Hysteria2 通过 QUIC 协议原生支持 UDP 加速，对实时性要求高的应用（如游戏或语音通话）表现极佳，能显著降低延迟并提高连接稳定性。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 的策略组如何根据节点延迟自动切换？</h5></div>
+    <div class="panel-heading"><h5>VMess AEAD 加密在高封锁环境的优势？</h5></div>
     <div class="panel-body">
-        策略组会根据节点延迟和丢包率自动选择最优节点。结合路由规则，可保证国内流量直连、海外流量走最佳节点，提高访问速度和连接稳定性，优化整体网络体验。<hr />    </div>
+        AEAD 加密可防止数据篡改和流量特征泄露，降低被检测风险。在高封锁网络中，保证节点可用性和连接稳定性，同时提升数据传输安全性，确保长期安全访问。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Potatso Lite 的节点测速功能有何局限？</h5></div>
@@ -365,9 +365,9 @@ clash -d ~/.config/clash &amp;
         Potatso Lite 节点测速只能显示延迟，无法测出带宽或实际下载速度。此外，测速结果受网络波动影响较大，建议结合实际使用体验来判断节点性能。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Mellow TUN 模式适合哪些应用？</h5></div>
+    <div class="panel-heading"><h5>VMess 的 TLS 选项何时使用最合适？</h5></div>
     <div class="panel-body">
-        TUN 模式拦截系统 IP 层流量，实现全局代理。适合游戏、视频、浏览器等全局应用，保证所有流量走节点，提高网络稳定性和速度，比普通 SOCKS5 代理覆盖范围更广。<hr />    </div>
+        TLS 可提供加密和伪装，适合在高封锁或不稳定网络环境使用。结合域名伪装和证书，可让流量看起来像普通 HTTPS 请求，提升抗封锁能力和隐蔽性。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Surfboard 如何在 iPhone 上使用？</h5></div>
@@ -375,14 +375,9 @@ clash -d ~/.config/clash &amp;
         从 App Store 下载 Surfboard 后，导入 Clash 订阅链接即可使用。Surfboard 提供直观的节点切换和规则管理界面，可查看实时延迟与流量数据，非常适合希望简单上手的 iOS 用户。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Hysteria2 是否支持 UDP 加速？</h5></div>
+    <div class="panel-heading"><h5>Mellow TUN 模式适合哪些应用？</h5></div>
     <div class="panel-body">
-        支持。Hysteria2 通过 QUIC 协议原生支持 UDP 加速，对实时性要求高的应用（如游戏或语音通话）表现极佳，能显著降低延迟并提高连接稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>PassWall2 如何实现按域名分流？</h5></div>
-    <div class="panel-body">
-        PassWall2 可通过域名规则匹配请求，将流量分流至指定节点。结合策略组和自动测速，可让不同网站走不同节点，实现加速和优化访问速度的效果。<hr />    </div>
+        TUN 模式拦截系统 IP 层流量，实现全局代理。适合游戏、视频、浏览器等全局应用，保证所有流量走节点，提高网络稳定性和速度，比普通 SOCKS5 代理覆盖范围更广。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>V2Ray 的 Routing 设置可以实现什么？</h5></div>
@@ -395,9 +390,14 @@ clash -d ~/.config/clash &amp;
         Mihomo 的日志默认关闭以节省性能。若需调试，可在配置文件中启用 `log-level: debug` 参数，日志将输出详细连接信息与错误提示，便于排查问题。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VMess AEAD 加密在高封锁环境的优势？</h5></div>
+    <div class="panel-heading"><h5>V2Ray 的策略组如何根据节点延迟自动切换？</h5></div>
     <div class="panel-body">
-        AEAD 加密可防止数据篡改和流量特征泄露，降低被检测风险。在高封锁网络中，保证节点可用性和连接稳定性，同时提升数据传输安全性，确保长期安全访问。    </div>
+        策略组会根据节点延迟和丢包率自动选择最优节点。结合路由规则，可保证国内流量直连、海外流量走最佳节点，提高访问速度和连接稳定性，优化整体网络体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>PassWall2 如何实现按域名分流？</h5></div>
+    <div class="panel-body">
+        PassWall2 可通过域名规则匹配请求，将流量分流至指定节点。结合策略组和自动测速，可让不同网站走不同节点，实现加速和优化访问速度的效果。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -445,16 +445,16 @@ clash -d ~/.config/clash &amp;
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-8-24-clash-verge-rev-node-share.htm" title="Clash Meta免费节点 | 8月24日18.9M/S|免费SSR节点/Trojan节点/V2ray节点/Shadowrocket节点/Clash节点/Singbox节点节点推荐，安卓机场梯子">Clash Meta免费节点 | 8月24日18.9M/S|免费SSR节点/Trojan节点/V2ray节点/Shadowrocket节点/Clash节点/Singbox节点节点推荐，安卓机场梯子</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-2-clash-verge-rev-node-share.htm" title="Clash Meta免费节点 | 9月2日19.8M/S|免费Clash节点/SSR节点/Trojan节点/Shadowrocket节点/Singbox节点/V2ray节点节点推荐，安卓机场梯子">Clash Meta免费节点 | 9月2日19.8M/S|免费Clash节点/SSR节点/Trojan节点/Shadowrocket节点/Singbox节点/V2ray节点节点推荐，安卓机场梯子</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-12-clash-verge-rev-nodes.htm" title="Clash Meta免费节点 | 8月12日19.3M/S|免费Shadowrocket节点/SSR节点/V2ray节点/Trojan节点/Clash节点/Singbox节点节点推荐，安卓机场梯子">Clash Meta免费节点 | 8月12日19.3M/S|免费Shadowrocket节点/SSR节点/V2ray节点/Trojan节点/Clash节点/Singbox节点节点推荐，安卓机场梯子</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-2026-9-5.htm" title="Clash Meta免费节点 | 9月5日18.1M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/Clash节点/SSR节点/Trojan节点节点推荐，安卓机场梯子">Clash Meta免费节点 | 9月5日18.1M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/Clash节点/SSR节点/Trojan节点节点推荐，安卓机场梯子</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-8-8-clash-node-daily-updates.htm" title="Clash Meta免费节点 | 8月8日20.6M/S|免费Clash节点/Trojan节点/SSR节点/Shadowrocket节点/V2ray节点/Singbox节点节点推荐，安卓机场梯子">Clash Meta免费节点 | 8月8日20.6M/S|免费Clash节点/Trojan节点/SSR节点/Shadowrocket节点/V2ray节点/Singbox节点节点推荐，安卓机场梯子</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-22-free-node-subscribe.htm" title="Clash Meta免费节点 | 8月22日20.9M/S|免费Shadowrocket节点/Clash节点/SSR节点/Singbox节点/V2ray节点/Trojan节点节点推荐，安卓机场梯子">Clash Meta免费节点 | 8月22日20.9M/S|免费Shadowrocket节点/Clash节点/SSR节点/Singbox节点/V2ray节点/Trojan节点节点推荐，安卓机场梯子</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/node-share-2026-8-17.htm" title="Clash Meta免费节点 | 8月17日19.2M/S|免费V2ray节点/SSR节点/Singbox节点/Trojan节点/Clash节点/Shadowrocket节点节点推荐，安卓机场梯子">Clash Meta免费节点 | 8月17日19.2M/S|免费V2ray节点/SSR节点/Singbox节点/Trojan节点/Clash节点/Shadowrocket节点节点推荐，安卓机场梯子</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-4-clash-node.htm" title="Clash Meta免费节点 | 9月4日21M/S|免费Trojan节点/Singbox节点/V2ray节点/Shadowrocket节点/SSR节点/Clash节点节点推荐，安卓机场梯子">Clash Meta免费节点 | 9月4日21M/S|免费Trojan节点/Singbox节点/V2ray节点/Shadowrocket节点/SSR节点/Clash节点节点推荐，安卓机场梯子</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-verge-rev-windows-2026-8-27.htm" title="Clash Meta免费节点 | 8月27日21.9M/S|免费Trojan节点/V2ray节点/Clash节点/SSR节点/Singbox节点/Shadowrocket节点节点推荐，安卓机场梯子">Clash Meta免费节点 | 8月27日21.9M/S|免费Trojan节点/V2ray节点/Clash节点/SSR节点/Singbox节点/Shadowrocket节点节点推荐，安卓机场梯子</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-verge-rev-node-2026-9-1.htm" title="Clash Meta免费节点 | 9月1日19.2M/S|免费SSR节点/Trojan节点/Clash节点/Shadowrocket节点/V2ray节点/Singbox节点节点推荐，安卓机场梯子">Clash Meta免费节点 | 9月1日19.2M/S|免费SSR节点/Trojan节点/Clash节点/Shadowrocket节点/V2ray节点/Singbox节点节点推荐，安卓机场梯子</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-28-clash-stash-node.htm" title="Clash Meta免费节点 | 8月28日22.4M/S|免费SSR节点/Clash节点/Trojan节点/Singbox节点/V2ray节点/Shadowrocket节点节点推荐，安卓机场梯子">Clash Meta免费节点 | 8月28日22.4M/S|免费SSR节点/Clash节点/Trojan节点/Singbox节点/V2ray节点/Shadowrocket节点节点推荐，安卓机场梯子</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-stash-2026-8-31.htm" title="Clash Meta免费节点 | 8月31日22.7M/S|免费SSR节点/Trojan节点/V2ray节点/Singbox节点/Shadowrocket节点/Clash节点节点推荐，安卓机场梯子">Clash Meta免费节点 | 8月31日22.7M/S|免费SSR节点/Trojan节点/V2ray节点/Singbox节点/Shadowrocket节点/Clash节点节点推荐，安卓机场梯子</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/node-share-2026-8-15.htm" title="Clash Meta免费节点 | 8月15日18M/S|免费V2ray节点/Trojan节点/Singbox节点/Clash节点/SSR节点/Shadowrocket节点节点推荐，安卓机场梯子">Clash Meta免费节点 | 8月15日18M/S|免费V2ray节点/Trojan节点/Singbox节点/Clash节点/SSR节点/Shadowrocket节点节点推荐，安卓机场梯子</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-6-free-node-subscribe.htm" title="Clash Meta免费节点 | 8月6日19.1M/S|免费SSR节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点/Trojan节点节点推荐，安卓机场梯子">Clash Meta免费节点 | 8月6日19.1M/S|免费SSR节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点/Trojan节点节点推荐，安卓机场梯子</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-v2ray-ss-ssr-2026-9-13.htm" title="Clash Meta免费节点 | 9月13日20.5M/S|免费V2ray节点/Clash节点/Shadowrocket节点/Singbox节点/Trojan节点/SSR节点节点推荐，安卓机场梯子">Clash Meta免费节点 | 9月13日20.5M/S|免费V2ray节点/Clash节点/Shadowrocket节点/Singbox节点/Trojan节点/SSR节点节点推荐，安卓机场梯子</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-stash-2026-8-11.htm" title="Clash Meta免费节点 | 8月11日19.7M/S|免费Shadowrocket节点/V2ray节点/Singbox节点/SSR节点/Clash节点/Trojan节点节点推荐，安卓机场梯子">Clash Meta免费节点 | 8月11日19.7M/S|免费Shadowrocket节点/V2ray节点/Singbox节点/SSR节点/Clash节点/Trojan节点节点推荐，安卓机场梯子</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-24-clash-verge-rev-node-share.htm" title="Clash Meta免费节点 | 8月24日18.9M/S|免费SSR节点/Trojan节点/V2ray节点/Shadowrocket节点/Clash节点/Singbox节点节点推荐，安卓机场梯子">Clash Meta免费节点 | 8月24日18.9M/S|免费SSR节点/Trojan节点/V2ray节点/Shadowrocket节点/Clash节点/Singbox节点节点推荐，安卓机场梯子</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-verge-rev-node-2026-8-25.htm" title="Clash Meta免费节点 | 8月25日21.4M/S|免费Trojan节点/Clash节点/V2ray节点/SSR节点/Singbox节点/Shadowrocket节点节点推荐，安卓机场梯子">Clash Meta免费节点 | 8月25日21.4M/S|免费Trojan节点/Clash节点/V2ray节点/SSR节点/Singbox节点/Shadowrocket节点节点推荐，安卓机场梯子</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -466,7 +466,7 @@ clash -d ~/.config/clash &amp;
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">8</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
+                <h4><span class="badge" style="float: right;">15</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
